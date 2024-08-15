@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RecipeEase</title>
+
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+</head>
+
+<body>
+    <header class="mb-5">
+        <div class="container">
+            <nav class="d-flex gap-5 align-items-center">
+                <div class="logo">
+                    <h1 class="pl-3">RecipeEase</h1>
+                </div>
+                <ul class="nav content-center">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="container">
+            <div class="d-flex recipe-grid" id="recipe-grid">
+                <!-- Recipes will be appended with js script -->
+            </div>
+        </section>
+
+        <!-- Recipe Modal -->
+        <div id="recipe-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">×</span>
+
+                <h2 class="display-2 mb-3 pb-1 border border-bottom capitalize" id="recipe-name">
+                    <!-- recipe name will be updated here -->
+                </h2>
+
+                <p class="mb-3" id="recipe-description">
+                </p>
+
+                <div class="d-flex p-5 bg-secondary mb-5">
+                    <img src="" class="img-fluid" alt="" id="recipe-img">
+                </div>
+
+                <div class="d-flex mb-5 gap-5 flex-wrap">
+                    <div class="servings">
+                        <span id="recipe-servings-count">
+                        <!-- no of servings for the recipe will be updated here -->
+                            
+                        </span> Servings
+                    </div>
+
+                    <div class="duration d-flex">
+                        <div class="pr-3">
+                            <h4 class="mb-1">PREP</h4>
+                            <span id="recipe-prep-time">
+                                <!-- prepation time will be updated here -->
+                            </span>
+                        </div>
+                        <div class="border border-left border-right pl-3 pr-3">
+                            <h4 class="mb-1">COOK</h4>
+                            <span id="recipe-cook-time">
+                                <!-- prepation time will be updated here -->
+                            </span>
+                        </div>
+                        <div class="pl-3">
+                            <h4 class="mb-1">TOTAL</h4>
+                            <span id="recipe-total-time">
+                                <!-- prepation time will be updated here -->
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-wrap">
+                    <div class="ingredient-column">
+                        <h3 class="mb-1">Ingredients</h3>
+
+                        <p class="text-italic fw-light fs-14 mb-3">Click to strike out ingredients shopped or available
+                        </p>
+
+                        <ul class="d-flex flex-column gap-3" id="ingredients-list">
+                            <!-- List of ingredients will be appended here-->
+                        </ul>
+                    </div>
+
+                    <div class="cooking-steps" id="recipe-steps">
+                        <h3 class="mb-3">Steps to prepare</h3>
+                        <!-- steps to prepare recipe will be appended -->
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+    <script src="assets/js/recipe.js"></script>
+</body>
+
+</html>
