@@ -221,17 +221,18 @@ function renderRecipes(container, modal)
 function showModal(modalElement)
 {
     modalElement.style.display = "block";
+    setTimeout(() => {
+        const modalContent = modalElement.querySelector('.modal-content');
+        if (modalContent) {
+            modalContent.focus();
+        }
+    }, 0); // Short timeout to ensure rendering is complete
 }
 
 // handle hiding of modal
 function hideModal(modalElement)
 {
     modalElement.style.display = "none";
-}
-
-function showModal(modalElement)
-{
-    modalElement.style.display = "block";
 }
 
 function showRecipe(recipe, modal)
